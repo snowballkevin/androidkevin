@@ -5,6 +5,12 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  workflow_dispatch:
+    inputs:
+      config_artifact_name:
+        description: "Optional config artifact name"
+        required: false
+        default: "common-configs-latest.zip"
 
 jobs:
   build:
